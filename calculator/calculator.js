@@ -1,25 +1,28 @@
-function add () {
-	
+function add (one = 0, two = 0) {
+	return one + two;
 }
 
-function subtract () {
-	
+function subtract (one = 0, two = 0) {
+	return one - two;
 }
 
-function sum () {
-	
+function sum (obj){
+	return obj.reduce((total, newItem) => total + newItem, 0);
 }
 
-function multiply () {
-	
+function multiply (obj) {
+	return obj.reduce((total, newItem) => total * newItem, 1);
 }
 
-function power() {
-	
+function power(one = 0, two = 0) {
+	return Math.pow(one, two);
 }
 
-function factorial() {
-	
+function factorial(factor) {
+	if (factor === 0){
+		return 1;
+	  }
+	  return factor * factorial (factor - 1);
 }
 
 module.exports = {
